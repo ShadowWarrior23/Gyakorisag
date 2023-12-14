@@ -2,35 +2,32 @@ import random
 
 def isItPerfect():
     pass
-
-def makeNum(n):
-    try:
-        n = int(n)
-    except ValueError:
-        n = None
-    return n
     
-def repInp():
-    start = None
-    while start == None:
-        start = input("Kezdő érték: ")
-        if makeNum(start):
-            print(start)
-        else:
-            print('Helytelen értéket adott meg!')
+def randGen(s, e, a):
+    nums = list()
+    for i in range(a):
+        nums.append(random.randint(s, e))
+    return nums
     
-def CreateNum():
+def CreateNum(text):
     #isCorrect = False
     while True:          #isCorrect:
-        n = input("Kérek egy számot: ")
+        n = input(text)
         try:
             n = int(n)
+            #isCorrect = True
             return n
         except ValueError:
             print('Helytelen értéket adott meg!')
 
-amount = input('Értékek száma: ')
+startMess= 'Kezdő érték: '
+endMess = 'Végérték: '
+amountMess = 'Értékek száma: '
 
+start = CreateNum(startMess)
+end = CreateNum(endMess)
+amount = CreateNum(amountMess)
 
+randGen(start, end, amount)
     
 input('Press Enter to exit!')
