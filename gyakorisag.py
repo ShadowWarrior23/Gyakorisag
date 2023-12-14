@@ -37,16 +37,18 @@ end = CreateNum(endMess)
 amount = CreateNum(amountMess)
 
 nums = randGen(start, end, amount)
-print(nums)
 
 for num in nums:
     if isItPerfect == num:
         perfNums.append(num)
 
 for num in perfNums:
-    if num in perfNumFreq.keys:
+    if num in perfNumFreq.keys():
         perfNumFreq[num] += 1
     else:
         perfNumFreq[num] = 1
+
+for key in perfNumFreq.keys():
+    print(f'{key}: {perfNumFreq[key]}')
 
 input('Press Enter to exit!')
