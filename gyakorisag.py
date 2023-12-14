@@ -10,12 +10,12 @@ def randGen(s, e, a):
     return nums
     
 def CreateNum(text):
-    #isCorrect = False
-    while True:          #isCorrect:
+    isCorrect = False
+    while isCorrect:
         n = input(text)
         try:
             n = int(n)
-            #isCorrect = True
+            isCorrect = True
             return n
         except ValueError:
             print('Helytelen értéket adott meg!')
