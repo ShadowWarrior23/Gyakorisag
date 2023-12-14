@@ -19,17 +19,18 @@ def repInp():
         else:
             print('Helytelen értéket adott meg!')
     
-
+def CreateNum():
+    #isCorrect = False
+    while True:          #isCorrect:
+        n = input("Kérek egy számot: ")
+        try:
+            n = int(n)
+            return n
+        except ValueError:
+            print('Helytelen értéket adott meg!')
 
 amount = input('Értékek száma: ')
 
-isCorrect = False
-while not isCorrect:
-    end = input("Végérték: ")
-    try:
-        end = int(end)
-        isCorrect = True
-    except ValueError:
-        print('Helytelen értéket adott meg!')
+
     
 input('Press Enter to exit!')
